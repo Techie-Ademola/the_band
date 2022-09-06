@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bootstrap Theme The Band</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    
+    <style>
+      html {
+        scroll-behavior:smooth;
+      }
+        .imagediv {
+            padding: 80px 100px;
+            text-align: center;
+        }
+        .person {
+            border: 10px solid transparent;
+            margin-bottom: 25px;
+            opacity: 0.7;
+            border-radius: 50%;
+        }
+        .person:hover {
+            border-color: #f1f1f1;
+        }
+        .carousel-indicators li {
+            width: 8px !important;
+            height: 8px !important;
+            margin-bottom: 20px;
+            border-radius: 50% !important;
+            border: 1px solid white;
+            background: black;
+        }
+      .carousel-indicators li.active {
+            background: white;
+        }
+        .carousel-inner img {
+            filter: grayscale(90%);
+            width: 100%;
+            margin: auto;
+        }
+        .placeholder {
+            margin-bottom: 20px;
+        }
+        .firstslide {
+            margin-bottom: 25px;
+        }
+        .bg-1 {
+            background: #2d2d30;
+            color: #bdbdbd;
+            padding: 80px 100px;
+        }
+        .bg-1 h3 {
+          color: white;
+          font-size: 22px;
+          letter-spacing: 10px;
+          padding-bottom: 20px;
+        }
+        .bg-1 p {
+          font-style: italic;
+        }
+        li {
+          border-radius: 0px !important;
+        }
+
+        .sold {
+          background: rgb(214, 37, 37);
+          padding: 3px 5px;
+          border-radius: 5px;
+          color: white;
+          font-weight: bold;
+          font-size: 12px;
+        }
+        .unsold {
+          float: inline-end;
+          padding: 9px 7px;
+          background: grey;
+          font-weight: bold;
+          color: white;
+          border-radius: 45%;
+        }
+        .thumbnail {
+          padding-bottom: 20px;
+          margin: 20px 0px;
+          border: none;
+          border-radius: 0;
+          background: white;
+        }
+        .btn {
+          padding: 10px 20px;
+          background-color: #333;
+          color: #f1f1f1;
+          border-radius: 0;
+          transition: .2s;
+        }
+        .btn:hover, .btn:focus {
+          border: 1px solid #333;
+          background-color: #fff;
+          color: #000 !important;
+        }
+        .bg-2 {
+            padding: 80px 100px;
+        }
+        .contact {
+          color: #000;
+        }
+        .send-comment:hover {
+          background: white;
+          color: black !important;
+        }
+        
+        .toggle-1 {
+          border: none;
+        }
+        .toggle-1:hover, .toggle-1:focus {
+          background-color: silver;
+        }
+      
+        .navlists {
+          color: lightgray !important;
+          letter-spacing: 4px;
+          font-size: 13px;
+          
+        }
+        .navlists:hover, .navlists:focus {
+          color: whitesmoke !important;
+          text-decoration: none;
+          /* background: #9a9aac !important; */
+        }
+  
+        .dropmargin {
+          padding: 10px;
+        }
+        .navlink:hover {
+          background: lightgray !important;
+        }
+        .navlink {
+          color: rgb(145, 144, 144) !important;
+        }
+        .navlink:active, .navlink:focus {
+          color: #333 !important;
+        }
+        .navbar {
+          background: #2d2d30;
+          opacity: 0.9;
+        }
+        .dropdown-menu {
+          /* padding: 10px 20px; */
+          color: #2d2d30;
+          width: 180px;
+          box-shadow: 0px 0px 15px lightgray;
+          border: 0px;
+        }
+        .dropdown-cont {
+          color: #2d2d30;
+          letter-spacing: 4px;
+          padding: 0px 20px;
+          
+        }
+        .dropdown-cont:hover {
+          text-decoration: none;
+          color: whitesmoke;
+          background: red;
+          
+        }
+        .footerweb:hover {
+          color: gray !important;
+          text-decoration: none;
+        }
+        #demo2, #demo, #demo3 {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div>
+      <nav class=" container-fluid navbar navbar-expand-sm navbar-light fixed-top py-0 pl-2">
+          <a class="navbar-brand lead" href="#" style="letter-spacing: 5px; color: lightgray;">Logo</a>
+          <button class="navbar-toggler px-1 py-0 toggle-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse options" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link px-3 py-3 navlists" href="#myPage">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3 py-3 navlists" href="#band">BAND</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3 py-3 navlists" href="#tour">TOUR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3 py-3 navlists" href="#contact">CONTACT</a>
+              </li>
+              <li class="dropdown" style="overflow-y: visible;">
+                <a class="dropdown-toggle px-3 py-3 navlists dropmargin d-block" data-toggle="dropdown" href="#">MORE</a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a class="d-block dropdown-cont" href="#">Merchandise</a></li>
+                  <li><a class="d-block dropdown-cont" href="#">Extras</a></li>
+                  <li><a class="d-block dropdown-cont" href="#">Media</a></li>
+                </ul>
+              </li>
+              <li style="overflow-y: visible;" class="pt-1">
+                <a style="font-size: 5px; text-decoration: none;" href="#"><i class="fa fa-search px-3 py-3 navlists d-block" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </nav>
+      </nav>
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        
+      <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./IMAGES/NEW YORK 1.jpg" class="d-block w-100" alt="New York">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="firstslide">New York</h5>
+              <p class="placeholder">The atmosphere in New York is lorem ipsum.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./IMAGES/NEW YORK 2.jpg" class="d-block w-100" alt="Chicago">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="firstslide">Chicago</h5>
+              <p class="placeholder">Thank you, Chicago - A night we won't forget.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./IMAGES/NEW YORK 3.jpg" class="d-block w-100" alt="Los Angeles">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="firstslide">L A</h5>
+              <p class="placeholder">Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+    </div>
+    
+    <!-- Container (The Band Section) -->
+    <div id="band" class="container text-center imagediv">
+        <h3 style="letter-spacing: 10px; font-family: 'Arial Narrow';">THE BAND</h3>
+        <br>
+        <p class="text-secondary"><em>We love music!</em></p>
+        <p class="text-secondary">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
+            id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+            ex ea commodo consequat.</p>
+            <br>
+        <div class="row text-center">
+            <div class="col-md-4 text-secondary">
+                <p class="font-weight-bold">Name</p>
+                <br>
+                <a href="#demo" data-toggle="collapse">
+                    <img src="./IMAGES/bandmember.jpg" class="img-fluid img-responsive person" alt="Random Name">
+                </a>
+                <div id="demo" class="collapse text-center">
+                    <p>Guitarist and Lead Vocalist</p>
+                    <p>Loves long walks on the beach</p>
+                    <p>Member since 1988</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-secondary">
+                <p class="font-weight-bold">Name</p>
+                <br>
+                <a href="#demo2" data-toggle="collapse">
+                    <img src="./IMAGES/bandmember.jpg" class="img-fluid img-responsive person" alt="Random Name">
+                </a>
+                <div id="demo2" class="collapse">
+                    <p>Drummer</p>
+                    <p>Loves drummin'</p>
+                    <p>Member since 1988</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-secondary">
+                <p class="font-weight-bold">Name</p>
+                <br>
+                <a href="#demo3" data-toggle="collapse">
+                    <img src="./IMAGES/bandmember.jpg" class="img-fluid img-responsive person" alt="Random Name">
+                </a>
+                <div id="demo3" class="collapse">
+                    <p>Bass player</p>
+                    <p>Loves math</p>
+                    <p>Member since 2005</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (TOUR Section) -->
+    <div id="tour" class="bg-1 py-5">
+      <div class="container my-4">
+        <h3 class="text-center">TOUR DATES</h3>
+        <p class="text-center pb-4">Lorem ipsum we'll play you some music.
+          <br> 
+          Remember to book your tickets!</p>
+
+        <ul class="list-group">
+          <li style="padding-left: 10px; padding-right: 0px;" class="list-group-item">September <span class="sold">Sold Out!</span></li>
+          <li style="padding-left: 10px; padding-right: 0px;" class="list-group-item">October <span class="sold">Sold Out!</span></li>
+          <li style="padding-left: 10px;" class="list-group-item">November <sup class="unsold">3</sup></li>
+        </ul>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class="img-fluid img-responsive" src="./IMAGES/paris 1.jpg" alt="Paris">
+              <p class="text-dark"><strong>Paris</strong></p>
+              <p class="text-dark">Fri. 27 November 2015</p>
+              <button class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Buy Tickets</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class="img-fluid img-responsive" src="./IMAGES/paris 2.jpg" alt="New York">
+              <p class="text-dark"><strong>New York</strong></p>
+              <p class="text-dark">Sat. 28 November 2015</p>
+              <button class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Buy Tickets</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class="img-fluid img-responsive" src="./IMAGES/paris 3.jpg" alt="San Francisco">
+              <p class="text-dark"><strong>San Francisco</strong></p>
+              <p class="text-dark">Sun. 29 November 2015</p>
+
+              <button class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Buy Tickets</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+
+        <!-- Modal Content -->
+        <div class="modal-content">
+          <div class="modal-header bg-dark py-5 px-5 text-white text-center">
+            <h4 style="font-size: 35px;" class="modal-title text-center mx-auto pl-5" id="exampleModalLabel">
+              <i class="fa fa-lock" aria-hidden="true"></i> Tickets</h4>
+            <button title="Close" type="button" class="close pr-3" data-dismiss="modal" aria-label="Close">
+              <sup><span style="font-size: 40px; color: #bdbdbd;" aria-hidden="true">&times;</span></sup>
+            </button>
+          </div>
+          <div class="modal-body px-5 py-4">
+            <form>
+              <div class="form-group">
+                <label style="color: lightgray;" for="recipient-name" class="col-form-label font-weight-bold"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Tickets, $23 per person</label>
+                <input type="number" class="form-control" id="recipient-name" placeholder="How many?">
+              </div>
+              <div class="form-group">
+                <label style="color: lightgray;" for="username" class="col-form-label font-weight-bold"><i class="fa fa-user" aria-hidden="true"></i> Send To</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Email">
+              </div>
+              <button type="submit" class="btn btn-block">Pay</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-danger btn default pull-left mr-auto" data-dismiss="modal">
+              Cancel
+            </button>
+            <p><em>Need <a href="#">help?</a></em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="bg-2 text-secondary">
+      <h3 class="text-center py-4 contact">Contact</h3>
+      <p class="text-center"><em>We love our fans</em></p>
+      <div class="row">
+        <div class="col-md-5">
+          <p>Fan? Drop a note.</p>
+          <p><i class="fa fa-map-marker" aria-hidden="true"></i> Chicago, US</p>
+          <p><i class="fa fa-mobile" aria-hidden="true"></i> Phone: +00 1515151515</p> 
+          <p><i class="fa fa-envelope" aria-hidden="true"></i> Email: mail@mail.com</p>
+        </div>
+        <div class="col-md-7">
+          <div class="row">
+            <div class="col-md-6 form-group"><input class="form-control" id="name" name="name" type="text" placeholder="Name"></div>
+            <div class="col-md-6 form-group"><input class="form-control" id="email" name="email" type="text" placeholder="Email"></div>
+          </div>
+          <textarea class="form-control" name="comments" id="comments" rows="5" placeholder="Comment"></textarea>
+          <div class="row" style="float: right;">
+            <div class="col-md-12 form-group">
+              <p><button class="btn btn-default text-white my-4 send-comment" type="button" id="button-addon1">Send</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="text-center pb-4" style="color: black; letter-spacing: 10px; font-size: 20px;">From The Blog</h3>
+
+      <ul class="nav nav-tabs">
+        <li class="nav-item active">
+          <a data-toggle="tab" class="nav-link active navlink" href="#home1">Mike</a>
+        </li>
+        <li class="nav-item">
+          <a data-toggle="tab" class="nav-link navlink" href="#menu1">Chandler</a>
+        </li>
+        <li class="nav-item">
+          <a data-toggle="tab" class="nav-link navlink" href="#menu2">Peter</a>
+        </li>
+      </ul>
+
+      <div class="tab-content py-4">
+        <div id="home1" class="tab-pane active">
+          <h2>Mike Ross, Manager</h2>
+          <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <h2>Chandler Bing, Guitarist</h2>
+          <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h2>Peter Griffin, Bass player</h2>
+          <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image of Location Map -->
+    <img class="img-fluid img-responsive" src="./IMAGES/location map.jpg" alt="Map">
+    
+    <!-- Footer -->
+    <footer class="container-fluid text-center pb-4 pt-4" style="font-size: 16px; background: #2d2d30; color: grey;">
+      <a class="up-arrow" data-toggle="tooltip" href="#myPage" title="TO TOP">
+          <i class="fa fa-angle-up py-4 text-white font-weight-bolder" aria-hidden="true" style="font-size: 20px;"></i>
+      </a>
+      <p style="color: white;">Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools"
+          style="color: white;" class="footerweb">www.w3schools.com</a></p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0c390bb7a0.js" crossorigin="anonymous"></script>
+</body>
+</html>
